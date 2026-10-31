@@ -13,10 +13,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(aegisedges
     app/main.cpp
     device/device.c
+    protocol/telemetry.c
 )
 
 target_include_directories(aegisedges PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/device
+    ${CMAKE_CURRENT_SOURCE_DIR}/protocol
 )
 
 target_compile_options(aegisedges PRIVATE
